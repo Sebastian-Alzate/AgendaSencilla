@@ -144,6 +144,11 @@ public class Pantalla extends javax.swing.JFrame {
         });
 
         editar.setText("Editar");
+        editar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                editarActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -250,11 +255,11 @@ public class Pantalla extends javax.swing.JFrame {
         // TODO add your handling code here:
         Connection con = conectar();
         if (con != null) {
-            if (!nombres.getText().isEmpty() &&
-                !apellidos.getText().isEmpty() &&
-                !telefono.getText().isEmpty() &&
-                !direccion.getText().isEmpty() &&
-                !email.getText().isEmpty()) {
+            if (!nombres.getText().isEmpty()
+                    && !apellidos.getText().isEmpty()
+                    && !telefono.getText().isEmpty()
+                    && !direccion.getText().isEmpty()
+                    && !email.getText().isEmpty()) {
                 String query = "INSERT INTO datos(id,nombres,apellidos,telefono,direccion,email) VALUES (null,'" + nombres.getText() + "','" + apellidos.getText() + "','" + telefono.getText() + "','" + direccion.getText() + "','" + email.getText() + "');";
                 try {
                     //preparo la consulta
@@ -301,19 +306,19 @@ public class Pantalla extends javax.swing.JFrame {
         // TODO add your handling code here:
         Connection con = conectar();
         if (con != null) {
-            if (nombres.getText() == null || apellidos.getText() == null || telefono.getText() == null || direccion.getText() == null || email.getText() == null) {
-                String query = "INSERT INTO datos(id,nombres,apellidos,telefono,direccion,email) VALUES (null,'" + nombres.getText() + "','" + apellidos.getText() + "','" + telefono.getText() + "','" + direccion.getText() + "','" + email.getText() + "');";
+            if (!email.getText().isEmpty()) {
+                String query = "DELETE FROM datos WHERE email = '" + email.getText() + "';";
                 try {
-                    //preparo la consulta
+                    // preparo la consulta
                     PreparedStatement preparar = con.prepareStatement(query);
-                    //ejecuto la consulta luego de prepararla, cuando la consulta es insert, update, delete etc, devuelve un entero con el número de filas afectadas
+                    // ejecuto la consulta
                     preparar.executeUpdate();
-                    salida.setText("Consulta correcta");
+                    salida.setText("Contacto eliminado correctamente.");
                 } catch (SQLException ex) {
-                    salida.setText("Error en la consulta");
+                    salida.setText("Error al eliminar el contacto.");
                 }
             } else {
-                salida.setText("No hay datos.");
+                salida.setText("No hay email.");
             }
         } else {
             salida.setText("Error conexión incorrecta.");
@@ -324,6 +329,33 @@ public class Pantalla extends javax.swing.JFrame {
         // TODO add your handling code here:
         System.exit(0);
     }//GEN-LAST:event_cerrarActionPerformed
+
+    private void editarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_editarActionPerformed
+        // TODO add your handling code here:
+        Connection con = conectar();
+        if (con != null) {
+            if (!nombres.getText().isEmpty()
+                    && !apellidos.getText().isEmpty()
+                    && !telefono.getText().isEmpty()
+                    && !direccion.getText().isEmpty()
+                    && !email.getText().isEmpty()) {
+                String query = "UPDATE datos SET nombres='" + nombres.getText() + "', apellidos='" + apellidos.getText() + "', telefono='" + telefono.getText() + "', direccion='" + direccion.getText() + "' WHERE email='" + email.getText() + "';";
+                try {
+                    // preparo la consulta
+                    PreparedStatement preparar = con.prepareStatement(query);
+                    // ejecuto la consulta
+                    preparar.executeUpdate();
+                    salida.setText("Contacto actualizado correctamente.");
+                } catch (SQLException ex) {
+                    salida.setText("Error al actualizar el contacto.");
+                }
+            } else {
+                salida.setText("No hay datos para actualizar.");
+            }
+        } else {
+            salida.setText("Error conexión incorrecta.");
+        }
+    }//GEN-LAST:event_editarActionPerformed
 
     /**
      * @param args the command line arguments
