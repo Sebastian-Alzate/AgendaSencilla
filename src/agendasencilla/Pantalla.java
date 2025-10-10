@@ -77,6 +77,12 @@ public class Pantalla extends javax.swing.JFrame {
         borrar = new javax.swing.JButton();
         cerrar = new javax.swing.JButton();
         editar = new javax.swing.JButton();
+        ListarCiudades = new javax.swing.JButton();
+        jLabel1 = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
+        ListarId = new javax.swing.JButton();
+        idInicio = new javax.swing.JTextField();
+        idFin = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -150,10 +156,34 @@ public class Pantalla extends javax.swing.JFrame {
             }
         });
 
+        ListarCiudades.setText("Listar Contactos");
+        ListarCiudades.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ListarCiudadesActionPerformed(evt);
+            }
+        });
+
+        jLabel1.setText("Listar contactos por ciudad");
+
+        jLabel2.setText("Listar contactor por rango");
+
+        ListarId.setText("Listar Contactos");
+        ListarId.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ListarIdActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(layout.createSequentialGroup()
+                .addGap(58, 58, 58)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(agregar))
+                .addGap(0, 0, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(titulo, javax.swing.GroupLayout.PREFERRED_SIZE, 108, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -187,21 +217,37 @@ public class Pantalla extends javax.swing.JFrame {
                             .addComponent(email, javax.swing.GroupLayout.PREFERRED_SIZE, 213, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                                 .addComponent(editar)
-                                .addGap(18, 18, 18)
+                                .addGap(31, 31, 31)
                                 .addComponent(borrar)
-                                .addGap(29, 29, 29))))
+                                .addGap(8, 8, 8))))
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(172, 172, 172)
-                        .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(54, Short.MAX_VALUE))
-            .addGroup(layout.createSequentialGroup()
-                .addGap(58, 58, 58)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(cerrar)
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(agregar)))
-                .addGap(0, 0, Short.MAX_VALUE))
+                        .addGap(190, 190, 190)
+                        .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(cerrar))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(28, 28, 28)
+                                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 143, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(42, 42, 42)
+                                .addComponent(ListarCiudades)))
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(39, 39, 39)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addComponent(idInicio, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(idFin, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addGap(10, 10, 10)
+                                        .addComponent(jLabel2))))
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(57, 57, 57)
+                                .addComponent(ListarId)))))
+                .addContainerGap(48, Short.MAX_VALUE))
             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(layout.createSequentialGroup()
                     .addGap(53, 53, 53)
@@ -226,25 +272,37 @@ public class Pantalla extends javax.swing.JFrame {
                     .addComponent(direccion, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(lemail)
                     .addComponent(email, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(29, 29, 29)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(agregar)
+                    .addComponent(consultar)
+                    .addComponent(borrar)
+                    .addComponent(editar))
+                .addGap(37, 37, 37)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 114, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(agregar)
-                            .addComponent(consultar)
-                            .addComponent(borrar)
-                            .addComponent(editar))
-                        .addGap(37, 37, 37)
-                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 114, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addComponent(cerrar))
-                .addContainerGap(24, Short.MAX_VALUE))
+                        .addGap(41, 41, 41)
+                        .addComponent(cerrar)))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(idInicio, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(idFin, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(ListarCiudades))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(ListarId)
+                .addGap(16, 16, 16))
             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(layout.createSequentialGroup()
                     .addGap(77, 77, 77)
                     .addComponent(lnombres)
-                    .addContainerGap(373, Short.MAX_VALUE)))
+                    .addContainerGap(442, Short.MAX_VALUE)))
         );
 
         pack();
@@ -357,6 +415,82 @@ public class Pantalla extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_editarActionPerformed
 
+    private void ListarCiudadesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ListarCiudadesActionPerformed
+        // TODO add your handling code here:
+        Connection con = conectar();
+        if (con != null) {
+            if (!direccion.getText().isEmpty()) {
+                String query = "SELECT * FROM datos WHERE direccion LIKE '%" + direccion.getText() + "%';";
+                try {
+                    PreparedStatement preparar = con.prepareStatement(query);
+                    ResultSet resultado = preparar.executeQuery();
+
+                    String lista = "";
+                    while (resultado.next()) {
+                        lista += "ID: " + resultado.getInt("id")
+                                + " | Nombre: " + resultado.getString("nombres")
+                                + " | Apellido: " + resultado.getString("apellidos")
+                                + " | Teléfono: " + resultado.getString("telefono")
+                                + " | Dirección: " + resultado.getString("direccion")
+                                + " | Email: " + resultado.getString("email") + "\n";
+                    }
+
+                    if (lista.isEmpty()) {
+                        salida.setText("No hay contactos en esa ciudad.");
+                    } else {
+                        salida.setText(lista);
+                    }
+
+                    preparar.close();
+                    con.close();
+
+                } catch (SQLException ex) {
+                    salida.setText("Error al listar contactos por ciudad.");
+                }
+            } else {
+                salida.setText("Por favor ingresa una ciudad para buscar.");
+            }
+        } else {
+            salida.setText("Error conexión incorrecta.");
+        }
+    }//GEN-LAST:event_ListarCiudadesActionPerformed
+
+    private void ListarIdActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ListarIdActionPerformed
+        // TODO add your handling code here:
+        Connection con = conectar();
+        if (con != null) {
+            if (!idInicio.getText().isEmpty() && !idFin.getText().isEmpty()) {
+                String query = "SELECT * FROM datos WHERE id BETWEEN " + idInicio.getText() + " AND " + idFin.getText() + ";";
+                try {
+                    PreparedStatement preparar = con.prepareStatement(query);
+                    ResultSet resultado = preparar.executeQuery();
+
+                    String lista = "";
+                    while (resultado.next()) {
+                        lista += "ID: " + resultado.getInt("id")
+                                + " | Nombre: " + resultado.getString("nombres")
+                                + " | Apellido: " + resultado.getString("apellidos")
+                                + " | Teléfono: " + resultado.getString("telefono")
+                                + " | Dirección: " + resultado.getString("direccion")
+                                + " | Email: " + resultado.getString("email") + "\n";
+                    }
+
+                    if (lista.isEmpty()) {
+                        salida.setText("No hay contactos en ese rango de ID.");
+                    } else {
+                        salida.setText(lista);
+                    }
+                } catch (SQLException ex) {
+                    salida.setText("Error al listar por rango de ID.");
+                }
+            } else {
+                salida.setText("Debes ingresar el ID inicial y el ID final.");
+            }
+        } else {
+            salida.setText("Error conexión incorrecta.");
+        }
+    }//GEN-LAST:event_ListarIdActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -393,6 +527,8 @@ public class Pantalla extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton ListarCiudades;
+    private javax.swing.JButton ListarId;
     private javax.swing.JButton agregar;
     private javax.swing.JTextField apellidos;
     private javax.swing.JButton borrar;
@@ -401,6 +537,10 @@ public class Pantalla extends javax.swing.JFrame {
     private javax.swing.JTextField direccion;
     private javax.swing.JButton editar;
     private javax.swing.JTextField email;
+    private javax.swing.JTextField idFin;
+    private javax.swing.JTextField idInicio;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JLabel lapellidos;
