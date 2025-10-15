@@ -57,6 +57,7 @@ public class Pantalla extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jLabel6 = new javax.swing.JLabel();
         titulo = new javax.swing.JLabel();
         ldireccion = new javax.swing.JLabel();
         lnombres = new javax.swing.JLabel();
@@ -70,7 +71,6 @@ public class Pantalla extends javax.swing.JFrame {
         ltelefono = new javax.swing.JLabel();
         apellidos = new javax.swing.JTextField();
         lemail = new javax.swing.JLabel();
-        email = new javax.swing.JTextField();
         agregar = new javax.swing.JButton();
         consultar = new javax.swing.JButton();
         nombres = new javax.swing.JTextField();
@@ -88,6 +88,27 @@ public class Pantalla extends javax.swing.JFrame {
         BuscarId = new javax.swing.JButton();
         idBuscar = new javax.swing.JTextField();
         jLabel3 = new javax.swing.JLabel();
+        ciudad = new javax.swing.JTextField();
+        jLabel4 = new javax.swing.JLabel();
+        ListarCalles = new javax.swing.JButton();
+        jLabel5 = new javax.swing.JLabel();
+        ListarCarreras = new javax.swing.JButton();
+        jLabel7 = new javax.swing.JLabel();
+        ListarPrefijo = new javax.swing.JButton();
+        email = new javax.swing.JTextField();
+        prefijo = new javax.swing.JTextField();
+        jLabel8 = new javax.swing.JLabel();
+        nombre = new javax.swing.JTextField();
+        jLabel9 = new javax.swing.JLabel();
+        apellido = new javax.swing.JTextField();
+        jLabel10 = new javax.swing.JLabel();
+        ListarAlfa = new javax.swing.JButton();
+        jLabel11 = new javax.swing.JLabel();
+        ListarIdPar = new javax.swing.JButton();
+        jLabel12 = new javax.swing.JLabel();
+        ListarIdImpar = new javax.swing.JButton();
+
+        jLabel6.setText("jLabel6");
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -119,12 +140,6 @@ public class Pantalla extends javax.swing.JFrame {
         ltelefono.setText("Teléfono:");
 
         lemail.setText("Email:");
-
-        email.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                emailActionPerformed(evt);
-            }
-        });
 
         agregar.setText("Agregar");
         agregar.addActionListener(new java.awt.event.ActionListener() {
@@ -202,113 +217,229 @@ public class Pantalla extends javax.swing.JFrame {
 
         jLabel3.setText("ID");
 
+        jLabel4.setText("Listar contactos que viven en calles");
+
+        ListarCalles.setText("Listar Contactos");
+        ListarCalles.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ListarCallesActionPerformed(evt);
+            }
+        });
+
+        jLabel5.setText("Listar contactos que viven en carreras");
+
+        ListarCarreras.setText("Listar Contactos");
+        ListarCarreras.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ListarCarrerasActionPerformed(evt);
+            }
+        });
+
+        jLabel7.setText("Listar contactos por prefijo");
+
+        ListarPrefijo.setText("Listar Contactos");
+        ListarPrefijo.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ListarPrefijoActionPerformed(evt);
+            }
+        });
+
+        jLabel8.setText("Buscar contacto por nombre o iniciales");
+
+        jLabel9.setText("Buscar contacto por apellido o iniciales");
+
+        jLabel10.setText("Listar contactos alfabéticamente");
+
+        ListarAlfa.setText("Listar Contactos");
+        ListarAlfa.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ListarAlfaActionPerformed(evt);
+            }
+        });
+
+        jLabel11.setText("Listar contactos por id par");
+
+        ListarIdPar.setText("Listar Contactos");
+        ListarIdPar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ListarIdParActionPerformed(evt);
+            }
+        });
+
+        jLabel12.setText("Listar contactos por id impar");
+
+        ListarIdImpar.setText("Listar Contactos");
+        ListarIdImpar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ListarIdImparActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(titulo, javax.swing.GroupLayout.PREFERRED_SIZE, 108, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(229, 229, 229))
             .addGroup(layout.createSequentialGroup()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(190, 190, 190)
-                        .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
-                        .addComponent(cerrar))
-                    .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(layout.createSequentialGroup()
-                                .addGap(28, 28, 28)
-                                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 143, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(layout.createSequentialGroup()
-                                .addGap(42, 42, 42)
-                                .addComponent(ListarCiudades)))
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(layout.createSequentialGroup()
-                                .addGap(39, 39, 39)
+                                .addGap(50, 50, 50)
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addGroup(layout.createSequentialGroup()
-                                        .addComponent(idInicio, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(idFin, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                        .addComponent(ldireccion)
+                                        .addGap(18, 18, 18)
+                                        .addComponent(direccion, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addGap(18, 18, 18)
+                                        .addComponent(lemail))
                                     .addGroup(layout.createSequentialGroup()
-                                        .addGap(10, 10, 10)
-                                        .addComponent(jLabel2))))
-                            .addGroup(layout.createSequentialGroup()
-                                .addGap(57, 57, 57)
-                                .addComponent(ListarId))))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(58, 58, 58)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(BuscarNombre)
-                                    .addComponent(BuscarApellido)))
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                                .addComponent(agregar)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(BuscarId)
-                                .addGap(21, 21, 21)))))
-                .addContainerGap(20, Short.MAX_VALUE))
-            .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(122, 122, 122)
-                        .addComponent(nombres, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
-                        .addComponent(lapellidos)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(apellidos, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(30, 30, 30)
-                        .addComponent(ltelefono)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(telefono, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(50, 50, 50)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(consultar)
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(ldireccion)
-                                .addGap(18, 18, 18)
-                                .addComponent(direccion, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(18, 18, 18)
-                                .addComponent(lemail)
-                                .addGap(12, 12, 12)))
-                        .addGap(18, 18, 18)
+                                        .addComponent(agregar)
+                                        .addGap(18, 18, 18)
+                                        .addComponent(editar)
+                                        .addGap(18, 18, 18)
+                                        .addComponent(borrar)
+                                        .addGap(18, 18, 18)
+                                        .addComponent(consultar)
+                                        .addGap(18, 18, 18)
+                                        .addComponent(cerrar))))
+                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                .addGroup(layout.createSequentialGroup()
+                                    .addContainerGap()
+                                    .addComponent(email, javax.swing.GroupLayout.PREFERRED_SIZE, 240, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
+                                    .addGap(122, 122, 122)
+                                    .addComponent(nombres, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addGap(18, 18, 18)
+                                    .addComponent(lapellidos)
+                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                    .addComponent(apellidos, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addGap(18, 18, 18)
+                                    .addComponent(ltelefono)
+                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                    .addComponent(telefono, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE))))
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(email, javax.swing.GroupLayout.PREFERRED_SIZE, 213, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                                .addComponent(editar)
-                                .addGap(31, 31, 31)
-                                .addComponent(borrar)
-                                .addGap(8, 8, 8)))))
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(72, 72, 72)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(idBuscar, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addGap(27, 27, 27)
+                                        .addComponent(jLabel3))))
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(59, 59, 59)
+                                .addComponent(BuscarId))))
                     .addGroup(layout.createSequentialGroup()
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(idBuscar, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(49, 49, 49))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(70, 70, 70)
-                        .addComponent(jLabel3)
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
+                        .addGap(46, 46, 46)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(layout.createSequentialGroup()
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addComponent(jScrollPane1)
+                                    .addComponent(jScrollPane2))
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addGap(51, 51, 51)
+                                        .addComponent(BuscarNombre))
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addGap(80, 80, 80)
+                                        .addComponent(nombre, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addGap(80, 80, 80)
+                                        .addComponent(apellido, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addGap(18, 18, 18)
+                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                            .addComponent(jLabel9)
+                                            .addComponent(jLabel8)))
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addGap(51, 51, 51)
+                                        .addComponent(BuscarApellido))
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addGap(64, 64, 64)
+                                        .addComponent(ListarCalles))))
+                            .addGroup(layout.createSequentialGroup()
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addGap(1, 1, 1)
+                                        .addComponent(jLabel10))
+                                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 143, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addGroup(layout.createSequentialGroup()
+                                            .addGap(14, 14, 14)
+                                            .addComponent(ListarCiudades))
+                                        .addGroup(layout.createSequentialGroup()
+                                            .addGap(32, 32, 32)
+                                            .addComponent(ciudad, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
+                                        .addGap(29, 29, 29)
+                                        .addComponent(ListarAlfa)))
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                        .addComponent(titulo, javax.swing.GroupLayout.PREFERRED_SIZE, 108, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addGap(229, 229, 229))
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addGap(34, 34, 34)
+                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                            .addGroup(layout.createSequentialGroup()
+                                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                                    .addComponent(jLabel11)
+                                                    .addComponent(ListarIdPar))
+                                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                                    .addGroup(layout.createSequentialGroup()
+                                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                                        .addComponent(jLabel12)
+                                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 15, Short.MAX_VALUE))
+                                                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                                        .addComponent(ListarIdImpar)
+                                                        .addGap(29, 29, 29)))
+                                                .addComponent(ListarPrefijo)
+                                                .addGap(78, 78, 78))
+                                            .addGroup(layout.createSequentialGroup()
+                                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                                    .addGroup(layout.createSequentialGroup()
+                                                        .addGap(10, 10, 10)
+                                                        .addComponent(jLabel2))
+                                                    .addGroup(layout.createSequentialGroup()
+                                                        .addGap(18, 18, 18)
+                                                        .addComponent(ListarId))
+                                                    .addGroup(layout.createSequentialGroup()
+                                                        .addComponent(idInicio, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                                        .addComponent(idFin, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                                        .addGroup(layout.createSequentialGroup()
+                                                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                                                .addComponent(jLabel4)
+                                                                .addComponent(jLabel5))
+                                                            .addGap(37, 37, 37))
+                                                        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                                                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                            .addComponent(prefijo, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                            .addGap(103, 103, 103)))
+                                                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                                                        .addComponent(ListarCarreras)
+                                                        .addGap(79, 79, 79))
+                                                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                                                        .addComponent(jLabel7)
+                                                        .addGap(69, 69, 69)))))))))))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(layout.createSequentialGroup()
                     .addGap(53, 53, 53)
                     .addComponent(lnombres)
-                    .addContainerGap(573, Short.MAX_VALUE)))
+                    .addContainerGap(666, Short.MAX_VALUE)))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
+                .addGap(23, 23, 23)
+                .addComponent(titulo)
+                .addGap(36, 36, 36)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(23, 23, 23)
-                        .addComponent(titulo)
-                        .addGap(36, 36, 36)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(lapellidos)
                             .addComponent(telefono, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -320,54 +451,87 @@ public class Pantalla extends javax.swing.JFrame {
                             .addComponent(ldireccion)
                             .addComponent(direccion, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(lemail)
-                            .addComponent(email, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(email, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(jLabel3)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(idBuscar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(18, 18, 18)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(agregar)
                             .addComponent(consultar)
                             .addComponent(borrar)
-                            .addComponent(editar))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(64, 64, 64)
-                        .addComponent(jLabel3)
+                            .addComponent(editar)
+                            .addComponent(agregar)
+                            .addComponent(cerrar))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(idBuscar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 114, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 116, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(18, 18, 18)
-                        .addComponent(BuscarId)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(31, 31, 31)
-                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 114, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(15, 15, 15)
-                        .addComponent(BuscarNombre)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                    .addComponent(idInicio, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(idFin, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(ListarId))
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(ciudad, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(ListarCiudades)))
+                        .addGap(18, 18, 18)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel10)
+                            .addComponent(jLabel11)
+                            .addComponent(jLabel12))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(BuscarApellido)))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(ListarAlfa)
+                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                .addComponent(ListarIdPar)
+                                .addComponent(ListarIdImpar)))
+                        .addGap(0, 0, Short.MAX_VALUE))
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(41, 41, 41)
-                        .addComponent(cerrar)))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(idInicio, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(idFin, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(ListarCiudades))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(ListarId)
-                .addGap(16, 16, 16))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(BuscarId)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(jLabel8)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(nombre, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(BuscarNombre)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(jLabel9)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(apellido, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(BuscarApellido)
+                        .addGap(18, 18, 18)
+                        .addComponent(jLabel4)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(ListarCalles, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(jLabel5)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(ListarCarreras)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(jLabel7)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(prefijo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(ListarPrefijo)
+                        .addGap(360, 360, 360))))
             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(layout.createSequentialGroup()
                     .addGap(77, 77, 77)
                     .addComponent(lnombres)
-                    .addContainerGap(442, Short.MAX_VALUE)))
+                    .addContainerGap(865, Short.MAX_VALUE)))
         );
 
         pack();
@@ -378,20 +542,16 @@ public class Pantalla extends javax.swing.JFrame {
         // TODO add your handling code here:
         Connection con = conectar();
         if (con != null) {
-            if (!nombres.getText().isEmpty()
-                    && !apellidos.getText().isEmpty()
-                    && !telefono.getText().isEmpty()
-                    && !direccion.getText().isEmpty()
-                    && !email.getText().isEmpty()) {
+            if (!nombres.getText().isEmpty() && !apellidos.getText().isEmpty() && !telefono.getText().isEmpty() && !direccion.getText().isEmpty() && !email.getText().isEmpty()) {
                 String query = "INSERT INTO datos(id,nombres,apellidos,telefono,direccion,email) VALUES (null,'" + nombres.getText() + "','" + apellidos.getText() + "','" + telefono.getText() + "','" + direccion.getText() + "','" + email.getText() + "');";
                 try {
                     //preparo la consulta
                     PreparedStatement preparar = con.prepareStatement(query);
                     //ejecuto la consulta luego de prepararla, cuando la consulta es insert, update, delete etc, devuelve un entero con el número de filas afectadas
                     preparar.executeUpdate();
-                    salida.setText("Consulta correcta");
+                    salida.setText("Consulta correcta.");
                 } catch (SQLException ex) {
-                    salida.setText("Error en la consulta");
+                    salida.setText("Error en la consulta.");
                 }
             } else {
                 salida.setText("No hay datos.");
@@ -406,24 +566,24 @@ public class Pantalla extends javax.swing.JFrame {
         //limpio la tabla antes de llevar los valores
         modelo.setRowCount(0);
         Connection con = conectar();
-        String query = "SELECT * FROM datos;";
-        try {
-            //preparo la consulta
-            PreparedStatement preparar = con.prepareStatement(query);
-            //ejecuto la consulta luego de prepararla, como es un select devuelve una lista de tipo ResultSet
-            ResultSet resultado = preparar.executeQuery();
-            //hago un ciclo para recorrer la lista y ponerla en la tabla de la interfaz
-            while (resultado.next()) {
-                modelo.addRow(new Object[]{resultado.getInt("id"), resultado.getString("nombres"), resultado.getString("apellidos"), resultado.getString("direccion"), resultado.getString("telefono"), resultado.getString("email")});
+        if (con != null) {
+            String query = "SELECT * FROM datos;";
+            try {
+                //preparo la consulta
+                PreparedStatement preparar = con.prepareStatement(query);
+                //ejecuto la consulta luego de prepararla, como es un select devuelve una lista de tipo ResultSet
+                ResultSet resultado = preparar.executeQuery();
+                //hago un ciclo para recorrer la lista y ponerla en la tabla de la interfaz
+                while (resultado.next()) {
+                    modelo.addRow(new Object[]{resultado.getInt("id"), resultado.getString("nombres"), resultado.getString("apellidos"), resultado.getString("direccion"), resultado.getString("telefono"), resultado.getString("email")});
+                }
+            } catch (SQLException ex) {
+                System.out.println("Error en el sql.");
             }
-        } catch (SQLException ex) {
-            System.out.println("Error en el sql");
+        } else {
+            salida.setText("Error conexión incorrecta.");
         }
     }//GEN-LAST:event_consultarActionPerformed
-
-    private void emailActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_emailActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_emailActionPerformed
 
     private void borrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_borrarActionPerformed
         // TODO add your handling code here:
@@ -441,7 +601,7 @@ public class Pantalla extends javax.swing.JFrame {
                     salida.setText("Error al eliminar el contacto.");
                 }
             } else {
-                salida.setText("No hay email.");
+                salida.setText("Debes ingresar un email.");
             }
         } else {
             salida.setText("Error conexión incorrecta.");
@@ -457,11 +617,7 @@ public class Pantalla extends javax.swing.JFrame {
         // TODO add your handling code here:
         Connection con = conectar();
         if (con != null) {
-            if (!nombres.getText().isEmpty()
-                    && !apellidos.getText().isEmpty()
-                    && !telefono.getText().isEmpty()
-                    && !direccion.getText().isEmpty()
-                    && !email.getText().isEmpty()) {
+            if (!nombres.getText().isEmpty() && !apellidos.getText().isEmpty() && !telefono.getText().isEmpty() && !direccion.getText().isEmpty() && !email.getText().isEmpty()) {
                 String query = "UPDATE datos SET nombres='" + nombres.getText() + "', apellidos='" + apellidos.getText() + "', telefono='" + telefono.getText() + "', direccion='" + direccion.getText() + "' WHERE email='" + email.getText() + "';";
                 try {
                     // preparo la consulta
@@ -473,7 +629,7 @@ public class Pantalla extends javax.swing.JFrame {
                     salida.setText("Error al actualizar el contacto.");
                 }
             } else {
-                salida.setText("No hay datos para actualizar.");
+                salida.setText("Ingresa los datos que quieres cambiar.");
             }
         } else {
             salida.setText("Error conexión incorrecta.");
@@ -485,27 +641,20 @@ public class Pantalla extends javax.swing.JFrame {
         modelo.setRowCount(0);
         Connection con = conectar();
         if (con != null) {
-            if (!direccion.getText().isEmpty()) {
-                String query = "SELECT * FROM datos WHERE direccion LIKE '%" + direccion.getText() + "%';";
+            if (!ciudad.getText().isEmpty()) {
+                String query = "SELECT * FROM datos WHERE direccion LIKE '%" + ciudad.getText() + "%';";
                 try {
                     PreparedStatement preparar = con.prepareStatement(query);
                     ResultSet resultado = preparar.executeQuery();
                     boolean hayDatos = false;
                     while (resultado.next()) {
-                        modelo.addRow(new Object[]{
-                            resultado.getInt("id"),
-                            resultado.getString("nombres"),
-                            resultado.getString("apellidos"),
-                            resultado.getString("direccion"),
-                            resultado.getString("telefono"),
-                            resultado.getString("email")
-                        });
+                        modelo.addRow(new Object[]{resultado.getInt("id"), resultado.getString("nombres"), resultado.getString("apellidos"), resultado.getString("telefono"), resultado.getString("direccion"), resultado.getString("email")});
                         hayDatos = true;
                     }
                     if (hayDatos) {
-                        salida.setText("Contactos listados por ciudad correctamente.");
+                        salida.setText("Contactos listados de " + ciudad.getText() + ".");
                     } else {
-                        salida.setText("No hay contactos en esa ciudad.");
+                        salida.setText("No hay contactos en " + ciudad.getText() + ".");
                     }
                 } catch (SQLException ex) {
                     salida.setText("Error al listar contactos por ciudad.");
@@ -516,7 +665,6 @@ public class Pantalla extends javax.swing.JFrame {
         } else {
             salida.setText("Error conexión incorrecta.");
         }
-
     }//GEN-LAST:event_ListarCiudadesActionPerformed
 
     private void ListarIdActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ListarIdActionPerformed
@@ -531,20 +679,13 @@ public class Pantalla extends javax.swing.JFrame {
                     ResultSet resultado = preparar.executeQuery();
                     boolean hayDatos = false;
                     while (resultado.next()) {
-                        modelo.addRow(new Object[]{
-                            resultado.getInt("id"),
-                            resultado.getString("nombres"),
-                            resultado.getString("apellidos"),
-                            resultado.getString("direccion"),
-                            resultado.getString("telefono"),
-                            resultado.getString("email")
-                        });
+                        modelo.addRow(new Object[]{resultado.getInt("id"), resultado.getString("nombres"), resultado.getString("apellidos"), resultado.getString("telefono"), resultado.getString("direccion"), resultado.getString("email")});
                         hayDatos = true;
                     }
                     if (hayDatos) {
-                        salida.setText("Contactos listados por rango de ID correctamente.");
+                        salida.setText("Contactos listados del " + idInicio.getText() + " al " + idFin.getText() + ".");
                     } else {
-                        salida.setText("No se encontraron contactos en ese rango.");
+                        salida.setText("No se encontraron contactos del " + idInicio.getText() + " al " + idFin.getText() + ".");
                     }
                 } catch (SQLException ex) {
                     salida.setText("Error al listar por rango de ID.");
@@ -562,27 +703,20 @@ public class Pantalla extends javax.swing.JFrame {
         modelo.setRowCount(0);
         Connection con = conectar();
         if (con != null) {
-            if (!nombres.getText().isEmpty()) {
-                String query = "SELECT * FROM datos WHERE nombres LIKE '%" + nombres.getText() + "%';";
+            if (!nombre.getText().isEmpty()) {
+                String query = "SELECT * FROM datos WHERE nombres LIKE '" + nombre.getText() + "%';";
                 try {
                     PreparedStatement preparar = con.prepareStatement(query);
                     ResultSet resultado = preparar.executeQuery();
                     boolean hayDatos = false;
                     while (resultado.next()) {
-                        modelo.addRow(new Object[]{
-                            resultado.getInt("id"),
-                            resultado.getString("nombres"),
-                            resultado.getString("apellidos"),
-                            resultado.getString("direccion"),
-                            resultado.getString("telefono"),
-                            resultado.getString("email")
-                        });
+                        modelo.addRow(new Object[]{resultado.getInt("id"), resultado.getString("nombres"), resultado.getString("apellidos"), resultado.getString("telefono"), resultado.getString("direccion"), resultado.getString("email")});
                         hayDatos = true;
                     }
                     if (hayDatos) {
-                        salida.setText("Búsqueda por nombre completada.");
+                        salida.setText("Búsqueda por el nombre de " + nombre.getText() + ".");
                     } else {
-                        salida.setText("No se encontraron contactos con ese nombre.");
+                        salida.setText("No se encontraron contactos con el nombre de " + nombre.getText() + ".");
                     }
                 } catch (SQLException ex) {
                     salida.setText("Error al buscar por nombre.");
@@ -600,27 +734,20 @@ public class Pantalla extends javax.swing.JFrame {
         modelo.setRowCount(0);
         Connection con = conectar();
         if (con != null) {
-            if (!apellidos.getText().isEmpty()) {
-                String query = "SELECT * FROM datos WHERE apellidos LIKE '%" + apellidos.getText() + "%';";
+            if (!apellido.getText().isEmpty()) {
+                String query = "SELECT * FROM datos WHERE apellidos LIKE '" + apellido.getText() + "%';";
                 try {
                     PreparedStatement preparar = con.prepareStatement(query);
                     ResultSet resultado = preparar.executeQuery();
                     boolean hayDatos = false;
                     while (resultado.next()) {
-                        modelo.addRow(new Object[]{
-                            resultado.getInt("id"),
-                            resultado.getString("nombres"),
-                            resultado.getString("apellidos"),
-                            resultado.getString("direccion"),
-                            resultado.getString("telefono"),
-                            resultado.getString("email")
-                        });
+                        modelo.addRow(new Object[]{resultado.getInt("id"), resultado.getString("nombres"), resultado.getString("apellidos"), resultado.getString("telefono"), resultado.getString("direccion"), resultado.getString("email")});
                         hayDatos = true;
                     }
                     if (hayDatos) {
-                        salida.setText("Búsqueda por apellido completada.");
+                        salida.setText("Búsqueda por el apellido de " + apellido.getText() + ".");
                     } else {
-                        salida.setText("No se encontraron contactos con ese apellido.");
+                        salida.setText("No se encontraron contactos con el apellido de " + apellidos.getText() + ".");
                     }
                 } catch (SQLException ex) {
                     salida.setText("Error al buscar por apellido.");
@@ -645,20 +772,13 @@ public class Pantalla extends javax.swing.JFrame {
                     ResultSet resultado = preparar.executeQuery();
                     boolean hayDatos = false;
                     while (resultado.next()) {
-                        modelo.addRow(new Object[]{
-                            resultado.getInt("id"),
-                            resultado.getString("nombres"),
-                            resultado.getString("apellidos"),
-                            resultado.getString("direccion"),
-                            resultado.getString("telefono"),
-                            resultado.getString("email")
-                        });
+                        modelo.addRow(new Object[]{resultado.getInt("id"), resultado.getString("nombres"), resultado.getString("apellidos"), resultado.getString("telefono"), resultado.getString("direccion"), resultado.getString("email")});
                         hayDatos = true;
                     }
                     if (hayDatos) {
-                        salida.setText("Contacto encontrado por ID.");
+                        salida.setText("Contacto encontrado por el siguiente id: " + idBuscar.getText() + ".");
                     } else {
-                        salida.setText("No existe ningún contacto con ese ID.");
+                        salida.setText("No existe ningún contacto con el siguiente id: " + idBuscar.getText() + ".");
                     }
                 } catch (SQLException ex) {
                     salida.setText("Error al buscar por ID.");
@@ -670,6 +790,154 @@ public class Pantalla extends javax.swing.JFrame {
             salida.setText("Error conexión incorrecta.");
         }
     }//GEN-LAST:event_BuscarIdActionPerformed
+
+    private void ListarCallesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ListarCallesActionPerformed
+        // TODO add your handling code here:
+        modelo.setRowCount(0);
+        Connection con = conectar();
+        if (con != null) {
+            String query = "SELECT * FROM datos WHERE direccion LIKE '%Cl%';";
+            try {
+                PreparedStatement preparar = con.prepareStatement(query);
+                ResultSet resultado = preparar.executeQuery();
+                boolean hayDatos = false;
+                while (resultado.next()) {
+                    modelo.addRow(new Object[]{resultado.getInt("id"), resultado.getString("nombres"), resultado.getString("apellidos"), resultado.getString("telefono"), resultado.getString("direccion"), resultado.getString("email")});
+                    hayDatos = true;
+                }
+                if (hayDatos) {
+                    salida.setText("Contactos listados que viven en calles.");
+                } else {
+                    salida.setText("No hay contactos que vivan en calles.");
+                }
+            } catch (SQLException ex) {
+                salida.setText("Error al listar contactos que viven en calles.");
+            }
+        } else {
+            salida.setText("Error conexión incorrecta.");
+        }
+    }//GEN-LAST:event_ListarCallesActionPerformed
+
+    private void ListarCarrerasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ListarCarrerasActionPerformed
+        // TODO add your handling code here:
+        modelo.setRowCount(0);
+        Connection con = conectar();
+        if (con != null) {
+            String query = "SELECT * FROM datos WHERE direccion LIKE '%Cra%';";
+            try {
+                PreparedStatement preparar = con.prepareStatement(query);
+                ResultSet resultado = preparar.executeQuery();
+                boolean hayDatos = false;
+                while (resultado.next()) {
+                    modelo.addRow(new Object[]{resultado.getInt("id"), resultado.getString("nombres"), resultado.getString("apellidos"), resultado.getString("telefono"), resultado.getString("direccion"), resultado.getString("email")});
+                    hayDatos = true;
+                }
+                if (hayDatos) {
+                    salida.setText("Contactos listados que viven en carreras.");
+                } else {
+                    salida.setText("No hay contactos que vivan en carreras.");
+                }
+            } catch (SQLException ex) {
+                salida.setText("Error al listar contactos que viven en carreras.");
+            }
+        } else {
+            salida.setText("Error conexión incorrecta.");
+        }
+    }//GEN-LAST:event_ListarCarrerasActionPerformed
+
+    private void ListarPrefijoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ListarPrefijoActionPerformed
+        // TODO add your handling code here:
+        modelo.setRowCount(0);
+        Connection con = conectar();
+        if (con != null) {
+            if (!prefijo.getText().isEmpty()) {
+                String query = "SELECT * FROM datos WHERE telefono LIKE '%" + prefijo.getText() + "%';";
+                try {
+                    PreparedStatement preparar = con.prepareStatement(query);
+                    ResultSet resultado = preparar.executeQuery();
+                    boolean hayDatos = false;
+                    while (resultado.next()) {
+                        modelo.addRow(new Object[]{resultado.getInt("id"), resultado.getString("nombres"), resultado.getString("apellidos"), resultado.getString("telefono"), resultado.getString("direccion"), resultado.getString("email")});
+                        hayDatos = true;
+                    }
+                    if (hayDatos) {
+                        salida.setText("Contactos listados con el prefijo: " + prefijo.getText() + ".");
+                    } else {
+                        salida.setText("No se encontraron contactos con el prefijo: " + prefijo.getText() + ".");
+                    }
+                } catch (SQLException ex) {
+                    salida.setText("Error al listar contactos por el prefijo.");
+                }
+            } else {
+                salida.setText("Por favor ingresa un prefijo para buscar.");
+            }
+        } else {
+            salida.setText("Error conexión incorrecta.");
+        }
+    }//GEN-LAST:event_ListarPrefijoActionPerformed
+
+    private void ListarAlfaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ListarAlfaActionPerformed
+        // TODO add your handling code here:
+        modelo.setRowCount(0);
+        Connection con = conectar();
+        if (con != null) {
+            String query = "SELECT * FROM datos ORDER BY nombres ASC;";
+            try {
+                PreparedStatement preparar = con.prepareStatement(query);
+                ResultSet resultado = preparar.executeQuery();
+                while (resultado.next()) {
+                    modelo.addRow(new Object[]{resultado.getInt("id"), resultado.getString("nombres"), resultado.getString("apellidos"), resultado.getString("telefono"), resultado.getString("direccion"), resultado.getString("email")});
+                }
+                salida.setText("Contactos listados alfabéticamente.");
+            } catch (SQLException ex) {
+                salida.setText("Error al listar contactos por el prefijo.");
+            }
+        } else {
+            salida.setText("Error conexión incorrecta.");
+        }
+    }//GEN-LAST:event_ListarAlfaActionPerformed
+
+    private void ListarIdParActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ListarIdParActionPerformed
+        // TODO add your handling code here:
+        modelo.setRowCount(0);
+        Connection con = conectar();
+        if (con != null) {
+            String query = "SELECT * FROM datos WHERE id % 2 = 0";
+            try {
+                PreparedStatement preparar = con.prepareStatement(query);
+                ResultSet resultado = preparar.executeQuery();
+                while (resultado.next()) {
+                    modelo.addRow(new Object[]{resultado.getInt("id"), resultado.getString("nombres"), resultado.getString("apellidos"), resultado.getString("telefono"), resultado.getString("direccion"), resultado.getString("email")});
+                }
+                salida.setText("Contactos listados por ID par.");
+            } catch (SQLException ex) {
+                salida.setText("Error al listar contactos por el ID par.");
+            }
+        } else {
+            salida.setText("Error conexión incorrecta.");
+        }
+    }//GEN-LAST:event_ListarIdParActionPerformed
+
+    private void ListarIdImparActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ListarIdImparActionPerformed
+        // TODO add your handling code here:
+        modelo.setRowCount(0);
+        Connection con = conectar();
+        if (con != null) {
+            String query = "SELECT * FROM datos WHERE id % 2 != 0";
+            try {
+                PreparedStatement preparar = con.prepareStatement(query);
+                ResultSet resultado = preparar.executeQuery();
+                while (resultado.next()) {
+                    modelo.addRow(new Object[]{resultado.getInt("id"), resultado.getString("nombres"), resultado.getString("apellidos"), resultado.getString("telefono"), resultado.getString("direccion"), resultado.getString("email")});
+                }
+                salida.setText("Contactos listados por ID impar.");
+            } catch (SQLException ex) {
+                salida.setText("Error al listar contactos por el ID impar.");
+            }
+        } else {
+            salida.setText("Error conexión incorrecta.");
+        }
+    }//GEN-LAST:event_ListarIdImparActionPerformed
 
     /**
      * @param args the command line arguments
@@ -710,12 +978,20 @@ public class Pantalla extends javax.swing.JFrame {
     private javax.swing.JButton BuscarApellido;
     private javax.swing.JButton BuscarId;
     private javax.swing.JButton BuscarNombre;
+    private javax.swing.JButton ListarAlfa;
+    private javax.swing.JButton ListarCalles;
+    private javax.swing.JButton ListarCarreras;
     private javax.swing.JButton ListarCiudades;
     private javax.swing.JButton ListarId;
+    private javax.swing.JButton ListarIdImpar;
+    private javax.swing.JButton ListarIdPar;
+    private javax.swing.JButton ListarPrefijo;
     private javax.swing.JButton agregar;
+    private javax.swing.JTextField apellido;
     private javax.swing.JTextField apellidos;
     private javax.swing.JButton borrar;
     private javax.swing.JButton cerrar;
+    private javax.swing.JTextField ciudad;
     private javax.swing.JButton consultar;
     private javax.swing.JTextField direccion;
     private javax.swing.JButton editar;
@@ -724,8 +1000,17 @@ public class Pantalla extends javax.swing.JFrame {
     private javax.swing.JTextField idFin;
     private javax.swing.JTextField idInicio;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel10;
+    private javax.swing.JLabel jLabel11;
+    private javax.swing.JLabel jLabel12;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel7;
+    private javax.swing.JLabel jLabel8;
+    private javax.swing.JLabel jLabel9;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JLabel lapellidos;
@@ -733,7 +1018,9 @@ public class Pantalla extends javax.swing.JFrame {
     private javax.swing.JLabel lemail;
     private javax.swing.JLabel lnombres;
     private javax.swing.JLabel ltelefono;
+    private javax.swing.JTextField nombre;
     private javax.swing.JTextField nombres;
+    private javax.swing.JTextField prefijo;
     private javax.swing.JTextArea salida;
     private javax.swing.JTable tabla;
     private javax.swing.JTextField telefono;
